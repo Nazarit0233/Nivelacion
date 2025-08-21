@@ -106,7 +106,7 @@ Un conflicto aparece cuando:
     En feature también editaste la linea 10 pero de otra forma.
 *Git no sabe cuál conservar, entonces marca un conflicto*
 
-<<<<<<< HEAD
+<<<<<<< Head
 código desde rama main
 =======
 código desde rama feature
