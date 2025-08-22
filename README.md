@@ -7,13 +7,18 @@ Markdown es un lenguaje de marcado ligero, es decir, una forma sencilla de dar f
 - Se convierte fácilmente a HTML, PDF, Word, etc.
 
 ## Títulos
--# Título 1
--## Título 2
--### Título 3
+\# Título 1
+\## Título 2
+\### Título 3
 
 # titulo 1
 ## Título 2
 ### Título 3
+
+## Escapado de caracteres especiales
+Para escribir directamente caracteres especiales con markdown, existe el **escape** de caracteres con la barra invertida **\***, anteponiendola a un caracter especial le indicas a Markdown que no lo procese como formato.
+
+\# No se interpretara como un titulo de nivel 1
 
 ## Negrita y cursiva
 **Negrita**  
