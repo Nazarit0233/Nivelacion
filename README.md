@@ -425,3 +425,58 @@ class Estudiante extends Persona {
     }
 }
 
+21. ### ¿Qué son los modificadores de acceso?
+los modificadores de acceso son palabras clave que controlan qué tan visible es una clase, atributo, constructor o método desde otras partes del programa, sirven para aplicar el principio de encapsulamiento en la Programación Orientada a Objetos (POO).
+
+#### public
+Accesible desde cualquier parte (misma clase, mismo paquete, subclases y otras clases externas), Se aplica a clases, métodos, variables.
+
+#### protected
+Accesible dentro del mismo paquete y también por subclases (aunque estén en otros paquetes), Se aplica a métodos, variables, constructores.
+
+#### default (package-private) (sin escribir nada)
+Accesible solo dentro del mismo paquete, Se aplica a clases, métodos, variables.
+
+#### private
+Accesible solo dentro de la misma clase. Nadie más puede verlo directamente, Se aplica a métodos, variables, constructores.
+
+*public → visible en todos lados.*
+*protected → visible en el paquete y subclases.*
+*default (sin palabra) → visible solo en el mismo paquete.*
+*private → visible solo dentro de la clase.*
+
+### ¿cuáles son los más comunes en Java?
+
+#### public
+Muy usado en clases, métodos y constructores que deben ser accesibles desde cualquier parte del programa.
+
+#### private
+El más usado para atributos (variables de instancia), porque se busca aplicar encapsulamiento, normalmente se accede a ellos mediante getters y setters.
+
+#### protected
+Se usa mucho en herencia: cuando quieres que las subclases tengan acceso a un atributo/método, pero que no sea completamente público.
+
+#### default (package-private)
+Es el menos usado directamente (porque se aplica cuando NO escribes ningún modificador), se utiliza cuando quieres que algo sea visible solo dentro del mismo paquete, pero no fuera de él.
+
+22. ### ¿Qué es una variable de entorno?
+Es una clave–valor que vive en el entorno del sistema (Windows, Linux, macOS), sirve para configurar parámetros globales sin necesidad de modificarlos directamente en el código fuente.
+
+En Windows:
+set JAVA_HOME=C:\Program Files\Java\jdk-21
+
+En Linux/Mac:
+export JAVA_HOME=/usr/lib/jvm/java-21
+
+### ¿Por qué son importantes en Java?
+#### Configuración del JDK y JVM
+Variables como JAVA_HOME le dicen al sistema dónde está instalado Java, PATH permite ejecutar java o javac desde cualquier carpeta.
+
+#### Flexibilidad en despliegue
+En vez de "quemar" rutas, contraseñas o claves en el código, se definen como variables de entorno.
+
+#### Seguridad
+Permiten guardar credenciales (API keys, contraseñas, tokens) fuera del código, así no se exponen en repositorios (GitHub, GitLab).
+
+#### Portabilidad
+Un mismo programa puede correr en distintos entornos (desarrollo, pruebas, producción) solo cambiando las variables, sin tocar el código.
